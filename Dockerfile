@@ -3,7 +3,7 @@ FROM openjdk:11-jdk
 RUN apt-get update && \
     curl -fsSL https://get.docker.com -o get-docker.sh && \
     sh -ex get-docker.sh && \
-    apt-get install -y build-essential \
+    apt-get install -y build-essential && \
     rm -rf /var/lib/apt/lists/* && \
     mkdir -p /root/.docker && \
     echo "{}" > /root/.docker/config.json
